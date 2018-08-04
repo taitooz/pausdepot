@@ -2,7 +2,7 @@
 <configuration>
 
     <conversionRule conversionWord="oneLineEx"
-                    converterClass="com.despegar.library.logging.logback.OneLineExceptionConverter" />
+                    converterClass="com.stockservice.logging.logback.OneLineExceptionConverter" />
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
