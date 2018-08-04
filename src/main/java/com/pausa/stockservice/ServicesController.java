@@ -18,7 +18,7 @@ public class ServicesController {
     private static final Logger LOGGER = LoggerFactory.getLogger(ServicesController.class);
 
 
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
     @ResponseBody
     public Object mailMessage(HttpServletRequest request) {
         LOGGER.debug("Entering controller.");
