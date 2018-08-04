@@ -29,10 +29,10 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 })
 public class StockServiceApplication {
 
-  public static void main(String[] args) {
-      SpringApplication app = new SpringApplication(StockServiceApplication.class);
-      app.run(args);
-  }
+    public static void main(String[] args) {
+        SpringApplication app = new SpringApplication(StockServiceApplication.class);
+        app.run(args);
+    }
 
 
     @Bean

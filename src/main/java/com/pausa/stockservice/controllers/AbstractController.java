@@ -1,4 +1,4 @@
-package com.pausa.stockservice;
+package com.pausa.stockservice.controllers;
 
 import org.slf4j.Logger;
 
