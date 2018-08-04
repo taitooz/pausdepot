@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
  * @author emiliano.lourbet - taitooz
  */
 @Controller
-public class ServicesController {
+public class ServicesController extends AbstractController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ServicesController.class);
 
@@ -21,8 +21,13 @@ public class ServicesController {
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     @ResponseBody
     public Object mailMessage(HttpServletRequest request) {
+        logDefaultParameters(request);
         LOGGER.debug("Entering controller.");
         return "Hello World motherfuckers!";
     }
 
+    @Override
+    protected Logger getLogger() {
+        return LOGGER;
+    }
 }

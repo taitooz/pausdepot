@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    <logger name="org.springframework.web" level="DEBUG"/>
     <conversionRule conversionWord="oneLineEx"
                     converterClass="com.stockservice.logging.logback.OneLineExceptionConverter" />
-
-    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%d %highlight(%-5level) %cyan([%mdc{xClient}-%X{tid}-%X{uow}-%X{requestId}-%mdc{xAdditionalInfo}]) [%thread] %cyan(%logger{55}) - %msg %n</pattern>
-        </encoder>
-    </appender>
-    <logger name="org.springframework" level="WARN" />
-    <logger name="org.springframework.mail.javamail" level="ERROR" />
-
-
-    <root level="INFO">
-        <appender-ref ref="console"/>
-    </root>
 </configuration>

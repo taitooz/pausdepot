@@ -9,6 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.*;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.web.servlet.ViewResolver;
+import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 /**
  * @author emiliano.lourbet - taitooz
@@ -42,6 +44,15 @@ public class StockServiceApplication {
         jom.setSerializationInclusion(JsonInclude.Include.NON_NULL);
         return jom;
     }
+
+
+    @Bean
+    public ViewResolver getViewResolver() {
+        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+        resolver.setSuffix(".html");
+        return resolver;
+    }
+
 
 //    @Bean
 //    public ServletRegistrationBean dispatcherRegistration(DispatcherServlet dispatcherServlet) {

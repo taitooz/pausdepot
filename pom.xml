@@ -100,7 +100,7 @@
                     <excludes>
                         <!-- this line excludes env folder entirely from the jar -->
                         <exclude>**/conf/env/**</exclude>
-                        <exclude>logback.xml</exclude>
+                        <!--<exclude>logback.xml</exclude>-->
                         <exclude>**/api.properties</exclude>
                         <exclude>**/swaggerdoc</exclude>
                     </excludes>
