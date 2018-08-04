@@ -10,6 +10,10 @@ import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.*;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
+/**
+ * @author emiliano.lourbet - taitooz
+ */
+
 @SpringBootApplication
 @ComponentScan("com.pausa.stockservice")
 @EnableScheduling
